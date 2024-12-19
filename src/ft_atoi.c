@@ -6,7 +6,7 @@
 /*   By: gade-oli <gade-oli@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/18 13:43:36 by gade-oli          #+#    #+#             */
-/*   Updated: 2022/09/27 18:06:13 by gade-oli         ###   ########.fr       */
+/*   Updated: 2024/12/19 16:17:18 by gade-oli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,11 +21,11 @@ int	ft_isspace(char c)
 	return (0);
 }
 
-int	ft_atoi(const char *nptr)
+long int	ft_atoi(const char *nptr)
 {
-	int	res;
-	int	i;
-	int	sign;
+	long int	res;
+	int			i;
+	int			sign;
 
 	sign = 1;
 	i = 0;
