@@ -6,7 +6,7 @@
 #    By: gade-oli <gade-oli@student.42madrid.com>   +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/09/16 11:53:14 by gade-oli          #+#    #+#              #
-#    Updated: 2023/11/03 12:00:38 by gade-oli         ###   ########.fr        #
+#    Updated: 2025/10/31 22:45:10 by gade-oli         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -36,16 +36,16 @@ all:		${NAME}
 
 bin/%.o:	src/%.c
 			@mkdir -p $(@D)
-			$(CC) $(CFLAGS) -c $< -o $@
+			@$(CC) $(CFLAGS) -c $< -o $@
 
 ${NAME}:	${OBJS} ${OBJBONUS}
-			ar -rcs ${NAME} ${OBJS} ${OBJBONUS}
+			@ar -rcs ${NAME} ${OBJS} ${OBJBONUS}
 
 clean:		
-			${RM} ${OBJS} ${OBJBONUS}
+			@${RM} ${OBJS} ${OBJBONUS}
 
 fclean:		clean
-			${RM} ${NAME}
+			@${RM} ${NAME}
 
 re:			fclean all
 
