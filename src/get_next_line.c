@@ -106,7 +106,7 @@ char	*get_next_line(int fd)
 	int			bytes_read;
 
 	if (fd < 0 || fd > OPEN_MAX || BUFFER_SIZE <= 0)
-		return (NULL);
+		return (free(stash), stash = NULL, NULL);
 	bytes_read = 1;
 	while (!ft_strchr(stash, '\n'))
 	{
